@@ -1,0 +1,12 @@
+<script>
+fetch("https://ipapi.co/json/")
+  .then(res => res.json())
+  .then(data => {
+    const tier1 = ["US", "CA", "GB", "AU"];
+    if (tier1.includes(data.country)) {
+      window.location.href = "https://your-adsterra-direct-link.com";
+    } else {
+      window.location.href = "https://example.com/safe-page";
+    }
+  });
+</script>
